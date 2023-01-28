@@ -7,7 +7,7 @@ authors = ["Dean Malmgren <dean.malmgren@datascopeanalytics.com>"]
 description = "Minimally maintained fork of deanmalmgren/textract to remove '*' dependencies"
 license = "MIT"
 name = "textract-py3"
-packages = [{include = "textract_py3"}]
+packages = [{include = "textract"}]
 readme = "README.md"
 repository = "https://github.com/KyleKing/textract-py3"
 version = "2.0.0"
@@ -34,4 +34,4 @@ nose = ">=1.3.7"
 pytest = ">=7.2.1"
 
 [tool.poetry.scripts]
-textract = "textract_py3.bin.textract:main"
+textract = "textract.bin.textract:main"
