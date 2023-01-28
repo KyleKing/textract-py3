@@ -10,6 +10,8 @@ latest changes in development for next release
 ----------------------------------------------
 
 .. THANKS FOR CONTRIBUTING; ADD YOUR UNRELEASED CHANGES HERE!
+2.0.1
+-------------------
 2.0.0
 -------------------
 1.6.5
