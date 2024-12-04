@@ -1,3 +1,5 @@
+# FYI: This file is kept for reference, but not used
+
 import glob
 import os
 from setuptools import setup
@@ -42,7 +44,7 @@ dependencies, dependency_links = parse_requirements(requirements_filename)
 
 setup(
     name=textract.__name__,
-    version="1.7.0",
+    version="2.1.0",
     description="extract text from any document. no muss. no fuss.",
     long_description=long_description,
     url=github_url,

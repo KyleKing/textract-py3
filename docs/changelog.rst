@@ -10,10 +10,23 @@ latest changes in development for next release
 ----------------------------------------------
 
 .. THANKS FOR CONTRIBUTING; ADD YOUR UNRELEASED CHANGES HERE!
-1.7.0
+
+* Drop python2 support
+
+2.1.0
 -------------------
 
-* Dropped python2 support
+* Merge minor bugfixes from upstream PRs and update documentation
+
+2.0.1
+-------------------
+
+* Fix package version and changelog
+
+2.0.0
+-------------------
+
+* Switch to poetry and relax all dependency constraints
 
 1.6.5
 -------------------
