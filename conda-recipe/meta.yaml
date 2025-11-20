@@ -1,0 +1,94 @@
+{% set name = "textract-py3" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "b5b99cca3d5f737e3243fe75c74e295d1ee8077b8e7437f8ff7460bf1857b9e3" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/textract_py3-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - textract = textract.bin.textract:main
+
+requirements:
+  host:
+    - python >=3.7
+    - pip
+    - poetry-core
+
+  run:
+    - python >=3.7
+    - speechrecognition >=3.8.1
+    - argcomplete >=1.10.0
+    - beautifulsoup4 >=4.8.0
+    - chardet >=3
+    - docx2txt >=0.8
+    - extract-msg >=0.30.11
+    - pdfminer.six >=20221105
+    - python-pptx >=0.6.18
+    - six >=1.16.0
+    - xlrd >=1.2.0,<2.0.0
+
+test:
+  imports:
+    - textract
+    - textract.cli
+    - textract.colors
+    - textract.exceptions
+    - textract.parsers
+    - textract.parsers.audio
+    - textract.parsers.csv_parser
+    - textract.parsers.doc_parser
+    - textract.parsers.docx_parser
+    - textract.parsers.eml_parser
+    - textract.parsers.epub_parser
+    - textract.parsers.gif_parser
+    - textract.parsers.html_parser
+    - textract.parsers.image
+    - textract.parsers.jpg_parser
+    - textract.parsers.json_parser
+    - textract.parsers.mp3_parser
+    - textract.parsers.msg_parser
+    - textract.parsers.odt_parser
+    - textract.parsers.ogg_parser
+    - textract.parsers.pdf_parser
+    - textract.parsers.png_parser
+    - textract.parsers.pptx_parser
+    - textract.parsers.ps_parser
+    - textract.parsers.psv_parser
+    - textract.parsers.rtf_parser
+    - textract.parsers.tiff_parser
+    - textract.parsers.tsv_parser
+    - textract.parsers.txt_parser
+    - textract.parsers.utils
+    - textract.parsers.wav_parser
+    - textract.parsers.xls_parser
+    - textract.parsers.xlsx_parser
+
+  commands:
+    - textract --help
+
+about:
+  home: https://github.com/KyleKing/textract-py3
+  license_file: LICENSE
+  license: MIT
+  license_family: MIT
+  summary: "Minimally maintained fork of deanmalmgren/textract to replace '*' dependencies"
+  description: |
+    This is a minimally maintained fork of deanmalmgren/textract to replace '*'
+    dependencies because they block usage of asdf, uvx and modern pip.
+    Extract text from any document. no muss. no fuss.
+  doc_url: https://github.com/KyleKing/textract-py3
+  dev_url: https://github.com/KyleKing/textract-py3
+
+extra:
+  recipe-maintainers:
+    - KyleKing
