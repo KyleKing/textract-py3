@@ -4,14 +4,24 @@ This is a minimally maintained fork of [deanmalmgren/textract](https://github.co
 
 ## Installation
 
-### Using conda (recommended for conda users)
+### Using conda or pixi (recommended for conda users)
 
 For users who prefer conda package management, a conda recipe is available in the `conda-recipe/` directory. See [conda-recipe/README.md](conda-recipe/README.md) for details on building and submitting to conda-forge.
 
-Once available on conda-forge, install with:
+Once available on conda-forge, install with conda:
 
 ```bash
 conda install -c conda-forge textract-py3
+```
+
+Or using [pixi](https://pixi.sh) (which uses conda-forge by default):
+
+```bash
+# Add to your project
+pixi add textract-py3
+
+# Or install globally as a CLI tool
+pixi global install textract-py3
 ```
 
 ### Using modern package managers

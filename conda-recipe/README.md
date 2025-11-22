@@ -60,6 +60,8 @@ To make this package available on conda-forge, follow these steps:
 
 Once the package is available on conda-forge, users can install it with:
 
+### Using conda
+
 ```bash
 conda install -c conda-forge textract-py3
 ```
@@ -70,6 +72,20 @@ Or add conda-forge to your channels:
 conda config --add channels conda-forge
 conda install textract-py3
 ```
+
+### Using pixi
+
+[Pixi](https://pixi.sh) is a modern package manager that uses conda-forge by default:
+
+```bash
+# Add to your project dependencies
+pixi add textract-py3
+
+# Or install globally as a CLI tool
+pixi global install textract-py3
+```
+
+Pixi provides fast, reproducible environments and is especially convenient for managing project dependencies with automatic lock file generation.
 
 ## Updating the Recipe
 
